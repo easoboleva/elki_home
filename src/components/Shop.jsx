@@ -1,13 +1,3 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import './App.css';
-import Profile from "./components/Profile";
-import Messages from "./components/Messages";
-import Shipping from "./components/Shipping";
-import Friends from "./components/Friends";
-import Catalog from "./components/Catalog";
-import Shop from "./components/Shop";
-import logo from "./assets/img/BINOSHE LOGO PNG.png";
-
 /* This example requires Tailwind CSS v3.0+ */
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
@@ -15,12 +5,12 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Каталог', href: '/catalog' },
-  { name: 'Доставка', href: '/shipping' },
-  { name: 'Шоу-румы', href: '#' },
-  { name: 'Контакты', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Company', href: '#' },
 ]
 
-export default function App() {
+export default function Shop() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -58,7 +48,7 @@ export default function App() {
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img src={logo} alt="Логотип" width={100} />
+                <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -129,7 +119,7 @@ export default function App() {
                       href="#"
                       className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                     >
-                      Связаться с нами
+                      Log in
                     </a>
                   </div>
                 </div>
@@ -142,13 +132,24 @@ export default function App() {
         <div className="relative px-6 lg:px-8">
           <div className="max-w-3xl pt-20 pb-32 mx-auto sm:pt-48 sm:pb-40">
             <div>
-              
+              <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                  <span className="text-gray-600">
+                    Announcing our next round of funding.{' '}
+                    <a href="#" className="font-semibold text-indigo-600">
+                      <span className="absolute inset-0" aria-hidden="true" />
+                      Read more <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
               <div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                  Закажите елку с доставкой
+                  Data to enrich your online business
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Новогодние искусственные ели с доставкой по России. Зимняя сказка у вас дома!
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+                  amet fugiat veniam occaecat fugiat aliqua.
                 </p>
                 <div className="flex mt-8 gap-x-4 sm:justify-center">
                   <a
@@ -202,47 +203,6 @@ export default function App() {
           </div>
         </div>
       </main>
-      <div> 
-        <Routes>
-          <Route path="/catalog" element={<Catalog/>}/>
-          <Route path="/shipping" element={<Shipping/>}/>
-        </Routes>
-      </div>
     </div>
   )
 }
-
-
-
-
-// function App(props) {
-//   return (
-//     <div className="mt-5 container-fluid">
-
-//       <button>Кнопка</button>
-      
-//       <div className="row">
-//         <div className="col-sm-3">
-//         <div  className="nav flex-column nav-pills"
-//         aria-orientation="vertical">
-// <NavLink  className="nav-link" to="catalog">Каталог</NavLink>
-// <NavLink  className="nav-link" to="shipping">Доставка</NavLink>
-// <NavLink  className="nav-link" to="profile">Контакты</NavLink>
-// <NavLink  className="nav-link" to="shop">Шоу-румы</NavLink>
-// </div>
-//         </div>
-//         <div className="col-sm-9">
-//           <Routes>
-//             <Route path="/profile/*" element={<Profile function={props.function.key_getUser}/>} />
-//             <Route path="/messages" element={<Messages/>}/>
-//             <Route path="/shipping" element={<Shipping/>}/>
-//             <Route path="/friends" element={<Friends function={props.function.key_getUsers}/>} />
-//             <Route path="/catalog" element={<Catalog/>}/>
-//             <Route path="/shop" element={<Shop/>}/>
-//           </Routes>
-//         </div>
-//       </div>
-//     </div>);
-// }
-
-// export default App;
