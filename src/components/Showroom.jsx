@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 
-export default function Shop() {
+export default function Showroom() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (

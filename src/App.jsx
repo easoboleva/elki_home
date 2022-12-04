@@ -1,13 +1,14 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
 import Profile from "./components/Profile";
 import Messages from "./components/Messages";
 import Shipping from "./components/Shipping";
 import Friends from "./components/Friends";
 import Catalog from "./components/Catalog";
-import Shop from "./components/Shop";
+import Showroom from "./components/Showroom";
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
 import Example from "./components/Elka";
+import Form from "./components/Form";
 
 /* This example requires Tailwind CSS v3.0+ */
 import { useState } from 'react'
@@ -17,8 +18,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'Каталог', href: '/catalog' },
   { name: 'Доставка', href: '/shipping' },
-  { name: 'Шоу-румы', href: '#' },
-  { name: 'Контакты', href: '#' },
+  { name: 'Шоу-румы', href: '/showroom' },
+  { name: 'Контакты', href: '/contacts' },
 ]
 
 export default function App() {
@@ -57,7 +58,7 @@ export default function App() {
         <div>
           <nav className="flex items-center justify-between h-9" aria-label="Global">
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img src={logo} alt="Логотип" width={100} />
               </a>
@@ -81,7 +82,7 @@ export default function App() {
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
               <a
-                href="#"
+                href="https://wa.me/79056996941"
                 className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               >
                 Связаться с нами
@@ -92,12 +93,12 @@ export default function App() {
             <Dialog.Panel focus="true" className="fixed inset-0 z-10 px-6 py-6 overflow-y-auto bg-white lg:hidden">
               <div className="flex items-center justify-between h-9">
                 <div className="flex">
-                  <a href="#" className="-m-1.5 p-1.5">
+                  <a href="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">Your Company</span>
                     <img
                       className="h-8"
                       src={logo} width={100}
-                      alt=""
+                      alt="Логотип"
                     />
                   </a>
                 </div>
@@ -127,7 +128,7 @@ export default function App() {
                   </div>
                   <div className="py-6">
                     <a
-                      href="#"
+                      href="https://wa.me/79056996941"
                       className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                     >
                       Связаться с нами
@@ -162,7 +163,7 @@ export default function App() {
                     </span>
                   </a>
                   <a
-                    href="#"
+                    href="/order"
                     className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                   >
                     Заказать
@@ -208,43 +209,11 @@ export default function App() {
           <Route path="/catalog" element={<Catalog/>}/>
           <Route path="/shipping" element={<Shipping/>}/>
           <Route path="/elka" element={<Example/>}/>
+          <Route path="/order" element={<Form/>}/>
+          <Route path="/showroom" element={<Showroom/>}/>
         </Routes>
       </div>
     </div>
   )
 }
 
-
-
-
-// function App(props) {
-//   return (
-//     <div className="mt-5 container-fluid">
-
-//       <button>Кнопка</button>
-      
-//       <div className="row">
-//         <div className="col-sm-3">
-//         <div  className="nav flex-column nav-pills"
-//         aria-orientation="vertical">
-// <NavLink  className="nav-link" to="catalog">Каталог</NavLink>
-// <NavLink  className="nav-link" to="shipping">Доставка</NavLink>
-// <NavLink  className="nav-link" to="profile">Контакты</NavLink>
-// <NavLink  className="nav-link" to="shop">Шоу-румы</NavLink>
-// </div>
-//         </div>
-//         <div className="col-sm-9">
-//           <Routes>
-//             <Route path="/profile/*" element={<Profile function={props.function.key_getUser}/>} />
-//             <Route path="/messages" element={<Messages/>}/>
-//             <Route path="/shipping" element={<Shipping/>}/>
-//             <Route path="/friends" element={<Friends function={props.function.key_getUsers}/>} />
-//             <Route path="/catalog" element={<Catalog/>}/>
-//             <Route path="/shop" element={<Shop/>}/>
-//           </Routes>
-//         </div>
-//       </div>
-//     </div>);
-// }
-
-// export default App;
