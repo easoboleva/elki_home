@@ -3,7 +3,7 @@ const products = [
   {
     id: 1,
     name: 'Искусственная елка Ile Grande',
-    href: '#',
+    href: '/elka',
     imageSrc: 'https://elki-premium.ru/upload/iblock/a70/tyjieq1lyb1gf3s09ai2lm8svw11157i.jpeg',
     imageAlt: "Искусственная елка Ile Grande",
     price: '15900р.',
@@ -77,7 +77,7 @@ const products = [
 export default function Catalog() {
   return (
     <div className="bg-white">
-      <div className="max-w-2xl px-4 py-16 mx-auto sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="max-w-2xl px-4 py-16 mx-auto sm:py-16 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Заснеженные ели</h2>
 
         <div className="grid grid-cols-1 mt-6 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">

@@ -7,6 +7,7 @@ import Friends from "./components/Friends";
 import Catalog from "./components/Catalog";
 import Shop from "./components/Shop";
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
+import Example from "./components/Elka";
 
 /* This example requires Tailwind CSS v3.0+ */
 import { useState } from 'react'
@@ -83,7 +84,7 @@ export default function App() {
                 href="#"
                 className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               >
-                Log in
+                Связаться с нами
               </a>
             </div>
           </nav>
@@ -95,7 +96,7 @@ export default function App() {
                     <span className="sr-only">Your Company</span>
                     <img
                       className="h-8"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                      src={logo} width={100}
                       alt=""
                     />
                   </a>
@@ -139,23 +140,23 @@ export default function App() {
         </div>
       </div>
       <main>
-        <div className="relative px-6 lg:px-8">
-          <div className="max-w-3xl pt-20 pb-32 mx-auto sm:pt-48 sm:pb-40">
+        <div className="relative px-6 h-96 lg:px-8">
+          <div className="max-w-2xl pt-20 pb-32 mx-auto sm:pt-15 sm:pb-40">
             <div>
               
               <div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
                   Закажите елку с доставкой
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+                <p className="mt-6 text-lg leading-5 text-gray-600 sm:text-center">
                   Новогодние искусственные ели с доставкой по России. Зимняя сказка у вас дома!
                 </p>
                 <div className="flex mt-8 gap-x-4 sm:justify-center">
                   <a
-                    href="#"
+                    href="/catalog"
                     className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
                   >
-                    Get started
+                    Каталог
                     <span className="text-indigo-200" aria-hidden="true">
                       &rarr;
                     </span>
@@ -164,7 +165,7 @@ export default function App() {
                     href="#"
                     className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                   >
-                    Live demo
+                    Заказать
                     <span className="text-gray-400" aria-hidden="true">
                       &rarr;
                     </span>
@@ -206,6 +207,7 @@ export default function App() {
         <Routes>
           <Route path="/catalog" element={<Catalog/>}/>
           <Route path="/shipping" element={<Shipping/>}/>
+          <Route path="/elka" element={<Example/>}/>
         </Routes>
       </div>
     </div>
