@@ -1,16 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css';
-import Profile from "./components/Profile";
-import Messages from "./components/Messages";
 import Shipping from "./components/Shipping";
-import Friends from "./components/Friends";
 import Catalog from "./components/Catalog";
 import Showroom from "./components/Showroom";
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
 import Example from "./components/Elka";
 import Form from "./components/Form";
 
-/* This example requires Tailwind CSS v3.0+ */
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -146,7 +142,7 @@ export default function App() {
             <div>
               
               <div>
-                <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+                <h1 className="text-xl font-bold tracking-tight sm:text-center sm:text-5xl">
                   Закажите елку с доставкой
                 </h1>
                 <p className="mt-6 text-lg leading-5 text-gray-600 sm:text-center">
