@@ -1,3 +1,5 @@
+
+
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 import Shipping from "./components/Shipping";
@@ -5,7 +7,7 @@ import Catalog from "./components/Catalog";
 import Showroom from "./components/Showroom";
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
 import Example from "./components/Elka";
-import Form from "./components/Form";
+import { handleOnSubmit, sendForm, Form } from "./components/Form";
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
@@ -160,7 +162,7 @@ export default function App() {
                   </a>
                   <a
                     href="/order"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20" onSubmit={handleOnSubmit}
                   >
                     Заказать
                     <span className="text-gray-400" aria-hidden="true">
@@ -207,6 +209,7 @@ export default function App() {
           <Route path="/elka" element={<Example/>}/>
           <Route path="/order" element={<Form/>}/>
           <Route path="/showroom" element={<Showroom/>}/>
+          {/* <Route path="/addUser" element={<Form/>} action={sendForm}/> */}
         </Routes>
       </div>
     </div>
