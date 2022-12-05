@@ -1,9 +1,38 @@
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import { LockClosedIcon } from '@heroicons/react/20/solid'
 
-export default function Form() {
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+import { redirect } from 'react-router-dom';
+
+const SERVICE_ID = "service_3csx7ik";
+const TEMPLATE_ID = "template_qafap4j";
+const USER_ID = "ZH7kiDz5oHG5rYV6r";
+
+const handleOnSubmit = (e) => {
+  e.preventDefault();
+  emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+    .then((result) => {
+      console.log(result.text);
+      Swal.fire({
+        icon: 'success',
+        title: 'Заявка принята'
+      })
+    }, (error) => {
+      console.log(error.text);
+      Swal.fire({
+        icon: 'error',
+        title: 'Ooops, something went wrong',
+        text: error.text,
+      })
+    });
+  e.target.reset();
+
+  return Form();
+} 
+  
+
+function Form() {
   const [open, setOpen] = useState(true)
 
   const cancelButtonRef = useRef(null)
@@ -46,7 +75,7 @@ export default function Form() {
                           Введите данные
                         </p>
 
-                        <form className="mt-8 space-y-6" action="#" method="POST">
+                        <form className="mt-8 space-y-6" onSubmit={handleOnSubmit}>
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
@@ -100,3 +129,25 @@ export default function Form() {
     </Transition.Root>
   )
 }
+
+
+
+
+// async function sendForm({request}) {
+//   // let formData = new FormData({request});
+
+//   // let response = await fetch("addUser", {
+//   //   method: "POST",
+//   //   body: formData,
+//   // });
+//   // let res = await response.json();
+
+//   // if (res.result == "success") {
+//   //   console.log("ok");
+//   // } else if (res.result == "exist") {
+//   //   console.log("not ok");
+//   //   return redirect('/catalog');
+//   // }
+// }
+
+export {handleOnSubmit, Form}
