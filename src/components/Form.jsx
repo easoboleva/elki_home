@@ -29,6 +29,7 @@ const handleOnSubmit = (e) => {
   e.target.reset();
 
   return Form();
+
 } 
   
 
@@ -79,12 +80,12 @@ function Form() {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
-                <label htmlFor="email-address" className="sr-only">
+                <label htmlFor="username" className="sr-only">
                   Имя
                 </label>
                 <input
                   id="name"
-                  name="name"
+                  name="username"
                   type="text"
                   required
                   className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
@@ -133,21 +134,21 @@ function Form() {
 
 
 
-// async function sendForm({request}) {
-//   // let formData = new FormData({request});
+// async function sendForm() {
+//   let formData = new FormData();
 
-//   // let response = await fetch("addUser", {
-//   //   method: "POST",
-//   //   body: formData,
-//   // });
-//   // let res = await response.json();
+//   let response = await fetch("/order", {
+//     method: "POST",
+//     body: formData,
+//   });
+//   let res = await response.json();
 
-//   // if (res.result == "success") {
-//   //   console.log("ok");
-//   // } else if (res.result == "exist") {
-//   //   console.log("not ok");
-//   //   return redirect('/catalog');
-//   // }
+//   if (res.result == "success") {
+//     console.log("success");
+//   } else if (res.result == "exist") {
+//     console.log("not ok");
+//     return redirect('/catalog');
+//   }
 // }
 
 export {handleOnSubmit, Form}

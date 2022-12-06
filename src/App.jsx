@@ -6,8 +6,8 @@ import Shipping from "./components/Shipping";
 import Catalog from "./components/Catalog";
 import Showroom from "./components/Showroom";
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
-import Example from "./components/Elka";
-import { handleOnSubmit, sendForm, Form } from "./components/Form";
+import Example from "./components/Product";
+import { handleOnSubmit, Form } from "./components/Form";
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
@@ -95,8 +95,8 @@ export default function App() {
                     <span className="sr-only">Your Company</span>
                     <img
                       className="h-8"
-                      src={logo} width={100}
-                      alt="Логотип"
+                      src={logo}
+                      alt="Логотип" width={100}
                     />
                   </a>
                 </div>
@@ -206,13 +206,12 @@ export default function App() {
         <Routes>
           <Route path="/catalog" element={<Catalog/>}/>
           <Route path="/shipping" element={<Shipping/>}/>
-          <Route path="/elka" element={<Example/>}/>
+          <Route path="/product" element={<Example/>}/>
           <Route path="/order" element={<Form/>}/>
-          <Route path="/showroom" element={<Showroom/>}/>
-          {/* <Route path="/addUser" element={<Form/>} action={sendForm}/> */}
         </Routes>
       </div>
     </div>
   )
 }
+
 
