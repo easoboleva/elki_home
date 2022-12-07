@@ -208,6 +208,7 @@ export default function App() {
           <Route path="/shipping" element={<Shipping/>}/>
           <Route path="/product" element={<Example/>}/>
           <Route path="/order" element={<Form/>}/>
+          <Route path="/showroom" element={<Showroom/>}/>
         </Routes>
       </div>
     </div>
