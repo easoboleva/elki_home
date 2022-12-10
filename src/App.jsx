@@ -12,6 +12,7 @@ import { handleOnSubmit, Form } from "./components/Form";
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Product2 from "./components/Product2";
 
 const navigation = [
   { name: 'Каталог', href: '/catalog' },
@@ -209,6 +210,7 @@ export default function App() {
           <Route path="/product" element={<Example/>}/>
           <Route path="/order" element={<Form/>}/>
           <Route path="/showroom" element={<Showroom/>}/>
+          <Route path="/product2" element={<Product2/>}/>
         </Routes>
       </div>
     </div>

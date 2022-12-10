@@ -1,4 +1,10 @@
+
+
 import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
+
+
+
+    
 
 const features = [
   {
@@ -27,8 +33,32 @@ const features = [
   },
 ]
 
+const product = {
+  images: [
+    {
+      src: 'https://ambrose.p-host.in//img/showroom/sr2.jpeg',
+      alt: 'Шоу-рум СПБ',
+    },
+    {
+      src: 'https://ambrose.p-host.in//img/showroom/sr1.jpg',
+      alt: 'Шоу-рум',
+    },
+    {
+      src: 'https://ambrose.p-host.in//img/showroom/srm6-min.png',
+      alt: 'Шоу-рум',
+    },
+    {
+      src: 'https://ambrose.p-host.in//img/showroom/sr1.jpeg',
+      alt: 'Шоу-рум',
+    },
+  ],
+
+}
+
 export default function Showrooms() {
   return (
+
+
     <div className="py-5 bg-white sm:py-32 lg:py-40">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="sm:text-center">
@@ -38,6 +68,42 @@ export default function Showrooms() {
           Посетите самый большой шоу-рум искусственных елей в Москве или Санкт-Петербурге. Каждый гость уходит от нас с покупкой и волшебным настроением!
           </p>
         </div>
+        <div className="pt-6">
+
+{/* Image gallery */}
+<div className="max-w-2xl mx-auto mt-6 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+  <div className="hidden overflow-hidden rounded-lg aspect-w-3 aspect-h-4 lg:block">
+    <img
+      src={product.images[0].src}
+      alt={product.images[0].alt}
+      className="object-cover object-center w-full h-full"
+    />
+  </div>
+  <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+    <div className="overflow-hidden rounded-lg aspect-w-3 aspect-h-2">
+      <img
+        src={product.images[1].src}
+        alt={product.images[1].alt}
+        className="object-cover object-center w-full h-full"
+      />
+    </div>
+    <div className="overflow-hidden rounded-lg aspect-w-3 aspect-h-2">
+      <img
+        src={product.images[2].src}
+        alt={product.images[2].alt}
+        className="object-cover object-center w-full h-full"
+      />
+    </div>
+  </div>
+  <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
+    <img
+      src={product.images[3].src}
+      alt={product.images[3].alt}
+      className="object-cover object-center w-full h-full"
+    />
+  </div>
+</div>
+</div>
 
         <div className="max-w-lg mt-20 sm:mx-auto md:max-w-none">
           <div className="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">

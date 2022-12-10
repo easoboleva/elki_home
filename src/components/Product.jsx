@@ -26,27 +26,27 @@ import { RadioGroup } from '@headlessui/react'
 const product = {
   name: 'Ile Grande',
   price: '15900р.',
-  href: '#',
+  href: '/product',
   breadcrumbs: [
     { id: 1, name: 'Искусственные ели', href: '/catalog' },
     { id: 2, name: 'Заснежанные ели', href: '/catalog' },
   ],
   images: [
-    // {
-    //   src: 'https://elki-premium.ru/upload/iblock/f57/x1fvtkvm43m547zsqzhgdxqqkyx5jlcz.png',
-    //   alt: 'Two each of gray, white, and black shirts laying flat.',
-    // },
-    // {
-    //   src: 'https://elki-premium.ru/upload/iblock/f57/x1fvtkvm43m547zsqzhgdxqqkyx5jlcz.png',
-    //   alt: 'Model wearing plain black basic tee.',
-    // },
-    // {
-    //   src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg',
-    //   alt: 'Model wearing plain gray basic tee.',
-    // },
     {
-      src: 'https://elki-premium.ru/upload/iblock/f57/x1fvtkvm43m547zsqzhgdxqqkyx5jlcz.png',
-      alt: 'Model wearing plain white basic tee.',
+      src: 'https://ambrose.p-host.in/img/ilegrande/2-min.png',
+      alt: 'Заснеженная ель Ile Grange',
+    },
+    {
+      src: 'https://ambrose.p-host.in/img/ilegrande/3-min.png',
+      alt: 'Заснеженная ель Ile Grange',
+    },
+    {
+      src: 'https://ambrose.p-host.in/img/ilegrande/4-min.png',
+      alt: 'Заснеженная ель Ile Grange',
+    },
+    {
+      src: 'https://ambrose.p-host.in/img/ilegrande/1-min.png',
+      alt: 'Заснеженная ель Ile Grange',
     },
   ],
   colors: [
@@ -120,7 +120,7 @@ export default function Example() {
 
         {/* Image gallery */}
         <div className="max-w-2xl mx-auto mt-6 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-          {/* <div className="hidden overflow-hidden rounded-lg aspect-w-3 aspect-h-4 lg:block">
+          <div className="hidden overflow-hidden rounded-lg aspect-w-3 aspect-h-4 lg:block">
             <img
               src={product.images[0].src}
               alt={product.images[0].alt}
@@ -142,7 +142,7 @@ export default function Example() {
                 className="object-cover object-center w-full h-full"
               />
             </div>
-          </div> */}
+          </div>
           <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
             <img
               src={product.images[0].src}

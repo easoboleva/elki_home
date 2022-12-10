@@ -4,7 +4,7 @@ const products = [
     id: 1,
     name: 'Искусственная елка Ile Grande',
     href: '/product',
-    imageSrc: 'https://ambrose.p-host.in/img/ilegrande/3-min.png',
+    imageSrc: 'https://ambrose.p-host.in/img/ilegrande/3-main.png',
     imageAlt: "Искусственная елка Ile Grande",
     price: '15900р.',
     color: 'Заснеженная с натуральной шишкой 180 см',
@@ -12,7 +12,7 @@ const products = [
   {
     id: 2,
     name: 'Искусственная елка Mont Blanc',
-    href: '#',
+    href: '/product2',
     imageSrc: 'https://ambrose.p-host.in/img/montblanc/montblanc1-min.png',
     imageAlt: "Искусственная елка Mont Blanc заснеженная 180 см",
     price: '20900р.',
