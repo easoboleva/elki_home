@@ -1,27 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
-import { useState } from 'react'
-import { StarIcon } from '@heroicons/react/20/solid'
-import { RadioGroup } from '@headlessui/react'
 
 const product = {
   name: 'Ile Grande',
@@ -33,57 +9,37 @@ const product = {
   ],
   images: [
     {
-      src: 'https://ambrose.p-host.in/img/ilegrande/2-min.png',
+      src: 'https://elkihome.ru/img/ilegrande/2-min.png',
       alt: 'Заснеженная ель Ile Grange',
     },
     {
-      src: 'https://ambrose.p-host.in/img/ilegrande/3-min.png',
+      src: 'https://elkihome.ru/img/ilegrande/3-min.png',
       alt: 'Заснеженная ель Ile Grange',
     },
     {
-      src: 'https://ambrose.p-host.in/img/ilegrande/4-min.png',
+      src: 'https://elkihome.ru/img/ilegrande/4-min.png',
       alt: 'Заснеженная ель Ile Grange',
     },
     {
-      src: 'https://ambrose.p-host.in/img/ilegrande/1-min.png',
+      src: 'https://elkihome.ru/img/ilegrande/1-min.png',
       alt: 'Заснеженная ель Ile Grange',
     },
   ],
-  colors: [
-    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  ],
-  sizes: [
-    { name: 'XXS', inStock: false },
-    { name: 'XS', inStock: true },
-    { name: 'S', inStock: true },
-    { name: 'M', inStock: true },
-    { name: 'L', inStock: true },
-    { name: 'XL', inStock: true },
-    { name: '2XL', inStock: true },
-    { name: '3XL', inStock: true },
-  ],
+
   description:
     'Искусственная заснеженная елка Ile Grande - премиальная новогодняя ель, имеющая правильный силуэт, натуральные шишки, а также натуральный вид приснеженной хвои, словно усыпана настоящим снегом в лесу. Ель экологичная и изготовлена из пожаробезопасных материалов, снег представляет собой искусственный хлопок (флок), нанесенный на производстве, не имеет запаха и не осыпается.',
   highlights: [
-    'Высота: 180 см',
-    'Литая+ПВХ',
-    'Материал подставки и ствола – металл',
-    'Срок службы – более 5 лет',
+    'Крепление веток ели со стволом – прочное шарнирное соединение, ветки уже закреплены на стволе и просто откидываются, что ускоряет время сборки.',
+    'Материал подставки и ствола – металл.',
+    'Материал хвои веток – литая хвоя на концах и ПВХ у основания, заснеженные искусственным хлопком.',
+    'Срок службы – более 5 лет.',
+    'Ель разборная (вставляется ствол в ствол), поставляется в компактной коробке, что удобно для хранения даже в маленьких студиях.',
   ],
   details:
-    'Елка, Подставка, Коробка, Инструкция, Подарочный мешок с гирляндой, Саше и перчатками для сборки',
-}
-const reviews = { href: '#', average: 4, totalCount: 117 }
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+    'Елка, подставка, коробка, инструкция, подарочный мешок с гирляндой, саше и перчатками для сборки.',
 }
 
 export default function Example() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 
   return (
     <div className="bg-white">
@@ -145,8 +101,8 @@ export default function Example() {
           </div>
           <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
             <img
-              src={product.images[0].src}
-              alt={product.images[0].alt}
+              src={product.images[3].src}
+              alt={product.images[3].alt}
               className="object-cover object-center w-full h-full"
             />
           </div>
@@ -161,7 +117,11 @@ export default function Example() {
           {/* Options */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
+            <p className="text-xl tracking-tight text-gray-900">
+              <li>180 см - 15 900 руб.</li>
+              <li>210 см - 21 900 руб.</li>
+              <li>240 см - 29 900 руб.</li>
+            </p>
 
             
             <div className="mt-6">

@@ -1,31 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
-import { useState } from 'react'
-import { StarIcon } from '@heroicons/react/20/solid'
-import { RadioGroup } from '@headlessui/react'
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import ChangePrice from './Price'
 
 const product = {
   name: 'Mont Blanc',
@@ -38,36 +10,21 @@ const product = {
   ],
   images: [
     {
-      src: 'https://ambrose.p-host.in/img/montblanc/1-min.jpg',
+      src: 'https://elkihome.ru/img/montblanc/1-min.jpg',
       alt: 'Искусственная заснеженная елка Mont Blanc',
     },
     {
-      src: 'https://ambrose.p-host.in/img/montblanc/2-min.jpg',
+      src: 'https://elkihome.ru/img/montblanc/2-min.jpg',
       alt: 'Искусственная заснеженная елка Mont Blanc',
     },
     {
-      src: 'https://ambrose.p-host.in/img/montblanc/3-min.jpg',
+      src: 'https://elkihome.ru/img/montblanc/3-min.jpg',
       alt: 'Искусственная заснеженная елка Mont Blanc',
     },
     {
-      src: 'https://ambrose.p-host.in/img/montblanc/4-min.jpg',
+      src: 'https://elkihome.ru/img/montblanc/4-min.jpg',
       alt: 'Искусственная заснеженная елка Mont Blanc',
     },
-  ],
-  colors: [
-    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  ],
-  sizes: [
-    { name: '180 см', inStock: true },
-    { name: '210 см', inStock: true },
-    { name: '240 см', inStock: true },
-    // { name: 'M', inStock: true },
-    // { name: 'L', inStock: true },
-    // { name: 'XL', inStock: true },
-    // { name: '2XL', inStock: true },
-    // { name: '3XL', inStock: true },
   ],
   description:
     'Искусственная заснеженная елка Mont Blanc - премиальная новогодняя ель, имеющая дикий и пышный силуэт с разными ярусами, как у пихты Фразера, и натуральный вид приснеженной хвои, словно усыпана настоящим снегом в лесу. Ель экологичная и изготовлена из пожаробезопасных материалов, снег представляет собой искусственный хлопок (флок), нанесенный на производстве, не имеет запаха и не осыпается.',
@@ -81,18 +38,8 @@ const product = {
   details:
     'Елка, подставка, коробка, инструкция, подарочный мешок с гирляндой, саше и перчатками для сборки.',
 }
-// const reviews = { href: '#', average: 4, totalCount: 117 }
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 
 export default function Product2() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])
-  const [selectedPrice, setSelectedPrice] = useState(product.price[0])
-
   return (
     <div className="bg-white">
       <div className="pt-6">
@@ -169,149 +116,28 @@ export default function Product2() {
           {/* Options */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl tracking-tight text-gray-900">
-            {selectedPrice}</p>
+            <p className="text-xl tracking-tight text-gray-900">
+              <li>180 см - 20 900 руб.</li>
+              <li>210 см - 32 900 руб.</li>
+              <li>240 см - 39 900 руб.</li>
+            </p>
             
-            {/* Reviews */}
-            {/* <div className="mt-6">
-              <h3 className="sr-only">Reviews</h3>
-              <div className="flex items-center">
-                <div className="flex items-center">
-                  {[0, 1, 2, 3, 4].map((rating) => (
-                    <StarIcon
-                      key={rating}
-                      className={classNames(
-                        reviews.average > rating ? 'text-gray-900' : 'text-gray-200',
-                        'h-5 w-5 flex-shrink-0'
-                      )}
-                      aria-hidden="true"
-                    />
-                  ))}
-                </div>
-                <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                  {reviews.totalCount} reviews
-                </a>
-              </div>
-            </div> */}
-
-            <form className="mt-10">
-              {/* Colors */}
-              <div>
-                <h3 className="text-sm font-medium text-gray-900">Выберите высоту ели</h3>
-
-                <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
-                  <RadioGroup.Label className="sr-only"> Choose a color </RadioGroup.Label>
-                  <div className="flex items-center space-x-3">
-                    {product.colors.map((color) => (
-                      <RadioGroup.Option
-                        key={color.name}
-                        value={color}
-                        className={({ active, checked }) =>
-                          classNames(
-                            color.selectedClass,
-                            active && checked ? 'ring ring-offset-1' : '',
-                            !active && checked ? 'ring-2' : '',
-                            '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none'
-                          )
-                        }
-                      >
-                        <RadioGroup.Label as="span" className="sr-only">
-                          {' '}
-                          {color.name}{' '}
-                        </RadioGroup.Label>
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            color.class,
-                            'h-8 w-8 border border-black border-opacity-10 rounded-full'
-                          )}
-                        />
-                      </RadioGroup.Option>
-                    ))}
-                  </div>
-                </RadioGroup>
-              </div>
-
-              {/* Sizes */}
-              <div className="mt-10">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-medium text-gray-900">Выберите высоту ели</h3>
-                  <a href="https://wa.me/79056996941" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                    Получить дополнительные фото и видео
-                  </a>
-                </div>
-
-                <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
-                  <RadioGroup.Label className="sr-only"> Choose a size </RadioGroup.Label>
-                  <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4" >
-                    {product.sizes.map((size) => (
-                      <RadioGroup.Option
-                        key={size.name}
-                        value={size}
-                        disabled={!size.inStock}
-                        className={({ active }) =>
-                          classNames(
-                            size.inStock
-                              ? 'bg-white shadow-sm text-gray-900 cursor-pointer'
-                              : 'bg-gray-50 text-gray-200 cursor-not-allowed',
-                            active ? 'ring-2 ring-indigo-500' : '',
-                            'group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'
-                          )
-                        }
-                      >
-                        {({ active, checked }) => (
-                          <>
-                            <RadioGroup.Label as="span">{size.name}</RadioGroup.Label>
-                            {size.inStock ? (
-                              <span
-                                className={classNames(
-                                  active ? 'border' : 'border-2', 
-                                  checked ? 'border-indigo-500' : 'border-transparent',
-                                  'pointer-events-auto absolute -inset-px rounded-md',
-                                )}
-                                aria-hidden="true" onClick={()=> {
-                                  console.log("click");
-                                  setSelectedPrice('30900 руб.')
-                                  }
-                                }
-                              />
-                            ) : (
-                              <span
-                                aria-hidden="true"
-                                className="absolute border-2 border-gray-200 rounded-md pointer-events-auto -inset-px"
-                              >
-                                <svg
-                                  className="absolute inset-0 w-full h-full text-gray-200 stroke-2"
-                                  viewBox="0 0 100 100"
-                                  preserveAspectRatio="none"
-                                  stroke="currentColor"
-                                >
-                                  <line x1={0} y1={100} x2={100} y2={0} vectorEffect="non-scaling-stroke" />
-                                </svg>
-                              </span>
-                            )}
-                          </>
-                        )}
-                      </RadioGroup.Option>
-                    ))}
-                  </div>
-                </RadioGroup>
-              </div>
-
-              <button
+            <div className="mt-6">
+            <a href="/order">
+            <button
                 type="submit"
                 className="flex items-center justify-center w-full px-8 py-3 mt-10 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Заказать
+              >Заказать
+                
               </button>
-            </form>
+            </a>   
+            </div>
           </div>
 
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8">
             {/* Description and details */}
             <div>
-              <h3 className="sr-only">Description</h3>
+              <h3 className="sr-only">Описание</h3>
 
               <div className="space-y-6">
                 <p className="text-base text-gray-900">{product.description}</p>
@@ -344,10 +170,4 @@ export default function Product2() {
       </div>
     </div>
   )
-
-  // function ChangePrice() {
-  // {size.name}.onClick => {product.description} = "10000 руб."
-  // }
 }
-
-
