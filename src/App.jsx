@@ -3,8 +3,10 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 import Shipping from "./components/Shipping";
+import Contact from "./components/Contact";
 import Catalog from "./components/Catalog";
 import Showroom from "./components/Showroom";
+// import Home from "./components/Home";
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
 import Example from "./components/Product";
 import { handleOnSubmit, Form } from "./components/Form";
@@ -24,7 +26,7 @@ const navigation = [
   { name: 'Каталог', href: '/catalog' },
   { name: 'Доставка', href: '/shipping' },
   { name: 'Шоу-румы', href: '/showroom' },
-  { name: 'Контакты', href: '/contacts' },
+  { name: 'Контакты', href: '/contact' },
 ]
 
 export default function App() {
@@ -87,7 +89,7 @@ export default function App() {
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
               <a
-                href="https://wa.me/79056996941"
+                href="https://wa.me/79299432349"
                 className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               >
                 Связаться с нами
@@ -101,7 +103,6 @@ export default function App() {
                   <a href="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">Your Company</span>
                     <img
-                      className="h-8"
                       src={logo}
                       alt="Логотип" width={100}
                     />
@@ -133,7 +134,7 @@ export default function App() {
                   </div>
                   <div className="py-6">
                     <a
-                      href="https://wa.me/79056996941"
+                      href="https://wa.me/79299432349"
                       className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                     >
                       Связаться с нами
@@ -212,6 +213,7 @@ export default function App() {
       <div> 
         <Routes>
           <Route path="/catalog" element={<Catalog/>}/>
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/shipping" element={<Shipping/>}/>
           <Route path="/product" element={<Example/>}/>
           <Route path="/order" element={<Form/>}/>

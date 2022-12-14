@@ -2,7 +2,7 @@
 const Shipping = () => {
   return (
     <>
-      <h1 className="px-3 py-6 text-2xl font-bold text-center">Доставка и оплата</h1>
+      <h1 className="px-3 py-6 text-3xl font-bold text-center">Доставка и оплата</h1>
       <h2 className="px-3 py-2 font-bold leading-8 text-center">Доставка по Москве и МО</h2>
       <p className="px-3 text-center">Рассчитывается по тарифам курьерской службы Dostavista, Яндекс доставка.</p>
       <p className="px-3 text-center">Оплата елки при получении.</p>

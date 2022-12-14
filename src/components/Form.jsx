@@ -3,7 +3,6 @@ import { Dialog, Transition } from '@headlessui/react'
 
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
-import { redirect } from 'react-router-dom';
 
 const SERVICE_ID = "service_3csx7ik";
 const TEMPLATE_ID = "template_qafap4j";
@@ -106,6 +105,19 @@ function Form() {
                   placeholder="Номер телефона"
                 />
               </div>
+              <div className='pt-3'>
+                <label htmlFor="message" className="sr-only">
+                  Комментарий
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  type="textaria"
+                  required
+                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none textaria rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Комментарий"
+                />
+              </div>
             </div>
 
             <div>
@@ -137,7 +149,7 @@ function Form() {
 // async function sendForm() {
 //   let formData = new FormData();
 
-//   let response = await fetch("/order", {
+//   let response = await fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
 //     method: "POST",
 //     body: formData,
 //   });

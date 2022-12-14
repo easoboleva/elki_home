@@ -106,6 +106,17 @@ export default function Catalog() {
           ))}
         </div>
       </div>
+      <div className="flex justify-center pb-16">
+        <a href="https://drive.google.com/file/d/1GaPUbVktoZ0KTcFkW4wpGH4dklK8IWaN/view?usp=sharing">
+          <button
+            type="submit"
+            className="relative flex justify-center w-full px-4 py-2 text-sm font-bold leading-7 text-white bg-indigo-700 border border-transparent rounded-lg group hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+            Посмотреть весь каталог
+            </button>
+        </a>
+      </div>
     </div>
+    
   )
 }

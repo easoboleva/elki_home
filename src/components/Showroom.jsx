@@ -1,10 +1,6 @@
 
 
-import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
-
-
-
-    
+import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
@@ -36,19 +32,19 @@ const features = [
 const product = {
   images: [
     {
-      src: 'https://ambrose.p-host.in//img/showroom/sr2.jpeg',
+      src: 'https://elkihome.ru//img/showroom/sr2.jpeg',
       alt: 'Шоу-рум СПБ',
     },
     {
-      src: 'https://ambrose.p-host.in//img/showroom/sr1.jpg',
+      src: 'https://elkihome.ru//img/showroom/sr1.jpg',
       alt: 'Шоу-рум',
     },
     {
-      src: 'https://ambrose.p-host.in//img/showroom/srm6-min.png',
-      alt: 'Шоу-рум',
+      src: 'https://elkihome.ru//img/showroom/srm6-min.png',
+      alt: 'Шоу-рум Мск',
     },
     {
-      src: 'https://ambrose.p-host.in//img/showroom/sr1.jpeg',
+      src: 'https://elkihome.ru//img/showroom/sr1.jpeg',
       alt: 'Шоу-рум',
     },
   ],
