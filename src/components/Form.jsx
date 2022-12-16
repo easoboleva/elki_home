@@ -101,8 +101,22 @@ function Form() {
                   type="tel"
                   autoComplete="tel"
                   required
-                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-b-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                   placeholder="Номер телефона"
+                />
+              </div>
+              <div>
+                <label htmlFor="gorod" className="sr-only">
+                  Gorod
+                </label>
+                <input
+                  id="gorod"
+                  name="gorod"
+                  type="text"
+                  autoComplete="gorod"
+                  required
+                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-b-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Ваш город"
                 />
               </div>
               <div className='pt-3'>
