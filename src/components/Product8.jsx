@@ -1,7 +1,7 @@
 
 const product = {
   name: 'Искусственная заснеженная елка Bergamo',
-  price: '15900р.',
+  price: '13900р.',
   href: '/product8',
   breadcrumbs: [
     { id: 1, name: 'Искусственные ели', href: '/catalog' },
