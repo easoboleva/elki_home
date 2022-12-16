@@ -1,6 +1,6 @@
 
 const product = {
-  name: 'Ile Grande',
+  name: 'Искусственная заснеженная елка Ile Grande',
   price: '15900р.',
   href: '/product',
   breadcrumbs: [

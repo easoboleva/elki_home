@@ -1,6 +1,6 @@
 
 const product = {
-  name: 'Mont Blanc',
+  name: 'Искусственная заснеженная елка Mont Blanc',
   price: ['20900'
   ],
   href: '/product2',

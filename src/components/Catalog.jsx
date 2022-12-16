@@ -2,12 +2,12 @@
 const products = [
   {
     id: 1,
-    name: 'Искусственная елка Ile Grande',
+    name: 'Искусственная елка заснеженная с натуральной шишкой Ile Grande',
     href: '/product',
     imageSrc: 'https://elkihome.ru/img/ilegrande/3-main.png',
     imageAlt: "Искусственная елка Ile Grande",
-    price: '15900р.',
-    color: 'Заснеженная с натуральной шишкой от 180 см',
+    price: 'от 15900р.',
+    color: 'Премиум(Литая+ПВХ) от 180 см',
   },
   {
     id: 5,
@@ -15,26 +15,17 @@ const products = [
     href: '/product5',
     imageSrc: 'https://elkihome.ru/img/corsica/corsica-min.png',
     imageAlt: "Искусственная елка Corsica заснеженная 180 см",
-    price: '15900р.',
-    color: 'Заснеженная от 180 см',
+    price: 'от 15900р.',
+    color: 'Премиум(Литая+ПВХ) от 180 см',
   },
   {
     id: 3,
-    name: 'Искусственная елка Saint Paul',
+    name: 'Искусственная елка заснеженная с натуральной шишкой Saint Paul',
     href: '/product3',
     imageSrc: 'https://elkihome.ru/img/saintpaul/saintpaul2-min.png',
     imageAlt: "Искусственная елка Saint Paul",
-    price: '15900р.',
-    color: 'Заснеженная с натуральной шишкой от 180 см',
-  },
-  {
-    id: 4,
-    name: 'Искусственная елка Bourget',
-    href: '/product4',
-    imageSrc: 'https://elkihome.ru/img/bourget/4-min.png',
-    imageAlt: "Искусственная елка Bourget заснеженная",
-    price: '12900р.',
-    color: 'Заснеженная от 180 см',
+    price: 'от 15900р.',
+    color: 'Премиум(Литая+ПВХ) от 180 см',
   },
   {
     id: 2,
@@ -42,8 +33,17 @@ const products = [
     href: '/product2',
     imageSrc: 'https://elkihome.ru/img/montblanc/montblanc1-min.png',
     imageAlt: "Искусственная елка Mont Blanc заснеженная 180 см",
-    price: '20900р.',
-    color: 'Заснеженная от 180 см',
+    price: 'от 20900р.',
+    color: 'Премиум(Литая+ПВХ) от 180 см',
+  },
+  {
+    id: 4,
+    name: 'Искусственная елка Geneva',
+    href: '/product4',
+    imageSrc: 'https://elkihome.ru/img/geneva/DSC_0730 _1_.jpg',
+    imageAlt: "Искусственная елка Geneva заснеженная",
+    price: 'от 14900р.',
+    color: 'Премиум(Литая+ПВХ) от 150 см',
   },
   {
     id: 6,
@@ -51,8 +51,8 @@ const products = [
     href: '/product6',
     imageSrc: 'https://elkihome.ru/img/arona/arona-min.jpg',
     imageAlt: "Искусственная елка Arona заснеженная от 150 см",
-    price: '10900р.',
-    color: 'Заснеженная от 150 см',
+    price: 'от 10900р.',
+    color: 'Премиум(Литая+ПВХ) от 150 см',
   },
   {
     id: 7,
@@ -60,8 +60,8 @@ const products = [
     href: '/product7',
     imageSrc: 'https://elkihome.ru/img/adele/adele.png',
     imageAlt: "Искусственная елка Adele заснеженная 120 см",
-    price: '7900р.',
-    color: 'Заснеженная от 120см',
+    price: 'от 7900р.',
+    color: 'Премиум(Литая+ПВХ) от 120см',
   },
   {
     id: 8,
@@ -69,8 +69,8 @@ const products = [
     href: 'product8',
     imageSrc: 'https://elkihome.ru/img/bergamo/bergamo-min.png',
     imageAlt: "Искусственная елка Bergamo заснеженная",
-    price: '13900р.',
-    color: 'Заснеженная от 150см',
+    price: 'от 13900р.',
+    color: 'Премиум(Литая+ПВХ) от 150см',
   },
 ]
 
@@ -106,6 +106,7 @@ export default function Catalog() {
           ))}
         </div>
       </div>
+
       <div className="flex justify-center pb-16">
         <a href="https://drive.google.com/file/d/1GaPUbVktoZ0KTcFkW4wpGH4dklK8IWaN/view?usp=sharing">
           <button
@@ -117,6 +118,5 @@ export default function Catalog() {
         </a>
       </div>
     </div>
-    
   )
 }

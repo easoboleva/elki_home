@@ -3,10 +3,14 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 import Shipping from "./components/Shipping";
+import CatalogAll from "./components/CatalogAll";
 import Contact from "./components/Contact";
 import Catalog from "./components/Catalog";
+import CatalogClassic from "./components/Classic";
 import Showroom from "./components/Showroom";
-// import Home from "./components/Home";
+import CatalogMain from "./components/CatalogMain";
+// import fon  from './assets/img/fon1.png';
+
 import logo from "./assets/img/BINOSHE LOGO PNG.png";
 import Example from "./components/Product";
 import { handleOnSubmit, Form } from "./components/Form";
@@ -21,6 +25,8 @@ import Product5 from "./components/Product5";
 import Product6 from "./components/Product6";
 import Product7 from "./components/Product7";
 import Product8 from "./components/Product8";
+import Product03 from "./components/Product03";
+
 
 const navigation = [
   { name: 'Каталог', href: '/catalog' },
@@ -89,10 +95,10 @@ export default function App() {
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
               <a
-                href="https://wa.me/79299432349"
-                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                href="https://wa.me/79917356533"
+                className="inline-block row rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               >
-                Связаться с нами
+              Связаться с нами
               </a>
             </div>
           </nav>
@@ -134,7 +140,7 @@ export default function App() {
                   </div>
                   <div className="py-6">
                     <a
-                      href="https://wa.me/79299432349"
+                      href="https://wa.me/79917356533"
                       className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                     >
                       Связаться с нами
@@ -160,7 +166,7 @@ export default function App() {
                 </p>
                 <div className="flex mt-8 gap-x-4 sm:justify-center">
                   <a
-                    href="/catalog"
+                    href="/"
                     className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
                   >
                     Каталог
@@ -210,9 +216,12 @@ export default function App() {
           </div>
         </div>
       </main>
+      {/* <div className="relative px-6 h-96 lg:px-8" style={{ backgroundImage: `url(${fon})` }}></div> */}
       <div> 
         <Routes>
           <Route path="/catalog" element={<Catalog/>}/>
+          <Route path="/classic" element={<CatalogClassic/>}/>
+          <Route path="/catalogall" element={<CatalogAll/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/shipping" element={<Shipping/>}/>
           <Route path="/product" element={<Example/>}/>
@@ -225,7 +234,8 @@ export default function App() {
           <Route path="/product6" element={<Product6/>}/>
           <Route path="/product7" element={<Product7/>}/>
           <Route path="/product8" element={<Product8/>}/>
-          <Route path="/" element={<Catalog/>}/>
+          <Route path="/product03" element={<Product03/>}/>
+          <Route path="/" element={<CatalogMain/>}/>
         </Routes>
       </div>
     </div>

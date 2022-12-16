@@ -1,6 +1,6 @@
 
 const product = {
-  name: 'Saint Paul',
+  name: 'Искусственная заснеженная елка Saint Paul',
   price: '15900р.',
   href: '/product3',
   breadcrumbs: [
